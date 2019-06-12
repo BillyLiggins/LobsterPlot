@@ -2,16 +2,16 @@
 
 int CommonStyle() {
 
-  // T2K style
-  TString localStyleName = "T2K";
+  // Special style
+  TString localStyleName = "Special";
   // -- WhichStyle --
   // 1 = presentation large fonts
   // 2 = presentation small fonts
   // 3 = publication/paper
   Int_t localWhichStyle = 3;
 
-  TStyle* t2kstyle = SetT2KStyle(localWhichStyle, localStyleName);
-  gROOT->SetStyle(t2kstyle->GetName());
+  TStyle* specialStyle = SetSpecialStyle(localWhichStyle, localStyleName);
+  gROOT->SetStyle(specialStyle->GetName());
 
   // -- margin --
   //  gStyle->SetPadTopMargin(0.05);
@@ -64,7 +64,7 @@ int CommonStyle() {
   //  gStyle->SetFillStyle(0);
 
   // -- axis --
-  //  t2kStyle->SetStripDecimals(kFALSE); // don't do 1.0 -> 1
+  //  specialStyle->SetStripDecimals(kFALSE); // don't do 1.0 -> 1
   //  TGaxis::SetMaxDigits(3); // doesn't seem to work :<
   // supressed zeroes!
   //  gStyle->SetHistMinimumZero(kFALSE);

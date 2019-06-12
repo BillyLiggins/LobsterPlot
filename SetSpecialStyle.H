@@ -1,7 +1,7 @@
 // --- T2K style ---
 
-TStyle* SetT2KStyle(Int_t WhichStyle = 1, TString styleName = "T2K") {
-  TStyle *t2kStyle= new TStyle(styleName, "T2K approved plots style");
+TStyle* SetSpecialStyle(Int_t WhichStyle = 1, TString styleName = "specialStyle") {
+  TStyle *specialStyle= new TStyle(styleName, "approved plots style");
   
   // -- WhichStyle --
   // 1 = presentation large fonts
@@ -35,87 +35,87 @@ TStyle* SetT2KStyle(Int_t WhichStyle = 1, TString styleName = "T2K") {
   }
 
   // use plain black on white colors
-  t2kStyle->SetFrameBorderMode(0);
-  t2kStyle->SetCanvasBorderMode(0);
-  t2kStyle->SetPadBorderMode(0);
-  t2kStyle->SetCanvasBorderSize(0);
-  t2kStyle->SetFrameBorderSize(0);
-  t2kStyle->SetDrawBorder(0);
-  t2kStyle->SetTitleBorderSize(0);
+  specialStyle->SetFrameBorderMode(0);
+  specialStyle->SetCanvasBorderMode(0);
+  specialStyle->SetPadBorderMode(0);
+  specialStyle->SetCanvasBorderSize(0);
+  specialStyle->SetFrameBorderSize(0);
+  specialStyle->SetDrawBorder(0);
+  specialStyle->SetTitleBorderSize(0);
 
-  t2kStyle->SetPadColor(0);
-  t2kStyle->SetCanvasColor(0);
-  t2kStyle->SetStatColor(0);
-  t2kStyle->SetFillColor(0);
+  specialStyle->SetPadColor(0);
+  specialStyle->SetCanvasColor(0);
+  specialStyle->SetStatColor(0);
+  specialStyle->SetFillColor(0);
 
-  t2kStyle->SetEndErrorSize(4);
-  t2kStyle->SetStripDecimals(kFALSE);
+  specialStyle->SetEndErrorSize(4);
+  specialStyle->SetStripDecimals(kFALSE);
 
-  t2kStyle->SetLegendBorderSize(0);
-  t2kStyle->SetLegendFont(FontStyle);
+  specialStyle->SetLegendBorderSize(0);
+  specialStyle->SetLegendFont(FontStyle);
 
   // set the paper & margin sizes
-  t2kStyle->SetPaperSize(20, 26);
-  t2kStyle->SetPadTopMargin(0.03);
-  t2kStyle->SetPadBottomMargin(0.13);
-  t2kStyle->SetPadRightMargin(0.03); // 0.075 -> 0.13 for colz option
-  t2kStyle->SetPadLeftMargin(0.13);//to include both large/small font options
+  specialStyle->SetPaperSize(20, 26);
+  specialStyle->SetPadTopMargin(0.03);
+  specialStyle->SetPadBottomMargin(0.13);
+  specialStyle->SetPadRightMargin(0.03); // 0.075 -> 0.13 for colz option
+  specialStyle->SetPadLeftMargin(0.13);//to include both large/small font options
   
   // Fonts, sizes, offsets
-  t2kStyle->SetTextFont(FontStyle);
-  t2kStyle->SetTextSize(0.08);
+  specialStyle->SetTextFont(FontStyle);
+  specialStyle->SetTextSize(0.08);
 
-  t2kStyle->SetLabelFont(FontStyle, "x");
-  t2kStyle->SetLabelFont(FontStyle, "y");
-  t2kStyle->SetLabelFont(FontStyle, "z");
-  t2kStyle->SetLabelFont(FontStyle, "t");
-  t2kStyle->SetLabelSize(FontSizeLabel, "x");
-  t2kStyle->SetLabelSize(FontSizeLabel, "y");
-  t2kStyle->SetLabelSize(FontSizeLabel, "z");
-  t2kStyle->SetLabelOffset(0.015, "x");
-  t2kStyle->SetLabelOffset(0.015, "y");
-  t2kStyle->SetLabelOffset(0.015, "z");
+  specialStyle->SetLabelFont(FontStyle, "x");
+  specialStyle->SetLabelFont(FontStyle, "y");
+  specialStyle->SetLabelFont(FontStyle, "z");
+  specialStyle->SetLabelFont(FontStyle, "t");
+  specialStyle->SetLabelSize(FontSizeLabel, "x");
+  specialStyle->SetLabelSize(FontSizeLabel, "y");
+  specialStyle->SetLabelSize(FontSizeLabel, "z");
+  specialStyle->SetLabelOffset(0.015, "x");
+  specialStyle->SetLabelOffset(0.015, "y");
+  specialStyle->SetLabelOffset(0.015, "z");
 
-  t2kStyle->SetTitleFont(FontStyle, "x");
-  t2kStyle->SetTitleFont(FontStyle, "y");
-  t2kStyle->SetTitleFont(FontStyle, "z");
-  t2kStyle->SetTitleFont(FontStyle, "t");
-  t2kStyle->SetTitleSize(FontSizeTitle, "y");
-  t2kStyle->SetTitleSize(FontSizeTitle, "x");
-  t2kStyle->SetTitleSize(FontSizeTitle, "z");
-  t2kStyle->SetTitleOffset(1.14, "x");
-  t2kStyle->SetTitleOffset(YOffsetTitle, "y");
-  t2kStyle->SetTitleOffset(1.2, "z");
+  specialStyle->SetTitleFont(FontStyle, "x");
+  specialStyle->SetTitleFont(FontStyle, "y");
+  specialStyle->SetTitleFont(FontStyle, "z");
+  specialStyle->SetTitleFont(FontStyle, "t");
+  specialStyle->SetTitleSize(FontSizeTitle, "y");
+  specialStyle->SetTitleSize(FontSizeTitle, "x");
+  specialStyle->SetTitleSize(FontSizeTitle, "z");
+  specialStyle->SetTitleOffset(1.14, "x");
+  specialStyle->SetTitleOffset(YOffsetTitle, "y");
+  specialStyle->SetTitleOffset(1.2, "z");
 
-  t2kStyle->SetTitleStyle(0);
-  t2kStyle->SetTitleFontSize(0.06);//0.08
-  t2kStyle->SetTitleFont(FontStyle, "pad");
-  t2kStyle->SetTitleBorderSize(0);
-  t2kStyle->SetTitleX(0.1f);
-  t2kStyle->SetTitleW(0.8f);
+  specialStyle->SetTitleStyle(0);
+  specialStyle->SetTitleFontSize(0.06);//0.08
+  specialStyle->SetTitleFont(FontStyle, "pad");
+  specialStyle->SetTitleBorderSize(0);
+  specialStyle->SetTitleX(0.1f);
+  specialStyle->SetTitleW(0.8f);
 
   // use bold lines and markers
-  t2kStyle->SetMarkerStyle(20);
-  t2kStyle->SetHistLineWidth( Width_t(2.5) );
-  t2kStyle->SetLineStyleString(2, "[12 12]"); // postscript dashes
+  specialStyle->SetMarkerStyle(20);
+  specialStyle->SetHistLineWidth( Width_t(2.5) );
+  specialStyle->SetLineStyleString(2, "[12 12]"); // postscript dashes
   
   // get rid of X error bars and y error bar caps
-  t2kStyle->SetErrorX(0.001);
+  specialStyle->SetErrorX(0.001);
   
   // do not display any of the standard histogram decorations
-  t2kStyle->SetOptTitle(0);
-  t2kStyle->SetOptStat(0);
-  t2kStyle->SetOptFit(0);
+  specialStyle->SetOptTitle(0);
+  specialStyle->SetOptStat(0);
+  specialStyle->SetOptFit(0);
   
   // put tick marks on top and RHS of plots
-  t2kStyle->SetPadTickX(1);
-  t2kStyle->SetPadTickY(1);
+  specialStyle->SetPadTickX(1);
+  specialStyle->SetPadTickY(1);
   
   // -- color --
   // functions blue
-  t2kStyle->SetFuncColor(600-4);
+  specialStyle->SetFuncColor(600-4);
 
-  t2kStyle->SetFillColor(1); // make color fillings (not white)
+  specialStyle->SetFillColor(1); // make color fillings (not white)
   // - color setup for 2D -
   // - "cold"/ blue-ish -
   Double_t red[]   = { 0.00, 0.00, 0.00 };
@@ -131,19 +131,19 @@ TStyle* SetT2KStyle(Int_t WhichStyle = 1, TString styleName = "T2K") {
   const Int_t NCont = 500;
 
   TColor::CreateGradientColorTable(NRGBs, stops, red, green, blue, NCont);
-  t2kStyle->SetNumberContours(NCont);
+  specialStyle->SetNumberContours(NCont);
 
   // - Rainbow -
-  //  t2kStyle->SetPalette(1);  // use the rainbow color set
+  //  specialStyle->SetPalette(1);  // use the rainbow color set
 
   // -- axis --
-  t2kStyle->SetStripDecimals(kFALSE); // don't do 1.0 -> 1
+  specialStyle->SetStripDecimals(kFALSE); // don't do 1.0 -> 1
   //  TGaxis::SetMaxDigits(3); // doesn't have an effect 
   // no supressed zeroes!
-  t2kStyle->SetHistMinimumZero(kTRUE);
+  specialStyle->SetHistMinimumZero(kTRUE);
 
 
- return(t2kStyle);
+ return(specialStyle);
 }
 
 
@@ -159,5 +159,3 @@ int AddGridLinesToPad(TPad *thisPad) {
   thisPad->SetGridy();
   return(0);
 }
-
-
